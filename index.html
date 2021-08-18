@@ -1,0 +1,33 @@
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Recamán's sequence</title>
+  <style>
+    body {
+        margin: 0;
+        padding: 0;
+    }
+    #info {
+        position: absolute;
+        top: 10pt;
+        left: 10pt;
+    }
+    #recaman {
+        width: 100%;
+        height: 100%;
+    }
+  </style>
+</head>
+<body>
+  <div id="info">
+    <p>
+      <a href="https://oeis.org/A005132">Recamán's sequence</a>
+    </p>
+    <p>
+      Scale: <span id="scale"></span>px per integer, scroll to change.
+    </p>
+  </div>
+  <canvas id="recaman"></canvas>
+  <script src="recaman.js" type="text/JavaScript"></script>
+</body>
+</html>
