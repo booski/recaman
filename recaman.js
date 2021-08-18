@@ -45,8 +45,6 @@ function draw() {
         }
 
         var color = "hsla("+ step +", 100%, 50%, .9)"
-        
-        console.log(color)
         p.strokeStyle = color
 
         var radius = step/2
