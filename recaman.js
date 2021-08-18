@@ -6,7 +6,7 @@ c.height = document.body.clientHeight
 var x_zero = 10
 var y_zero = c.height / 2
 
-var scale = 1
+var scale = 2
 
 function set_scale(event) {
     if(event.deltaY < 0) {
@@ -36,7 +36,7 @@ function draw() {
     var step = 1
     var log = [0]
     var up = true
-    for(var i = 0; i < c.width * (1/scale);) {
+    for(var i = 0; i < c.width * (2/scale);) {
         var next = i - step
         var forwards = false
         if(next < 0 || log.indexOf(next) != -1) {
