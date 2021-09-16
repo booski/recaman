@@ -13,7 +13,7 @@
         top: 10pt;
         left: 10pt;
     }
-    #recaman {
+    .recaman {
         width: 100%;
         height: 100%;
     }
@@ -29,7 +29,10 @@
       <span id="help">scroll to change</span>.
     </p>
   </div>
-  <canvas id="recaman"></canvas>
+  <canvas class="recaman"
+          data-scale="2"
+          data-xzero="10">
+  </canvas>
   <script src="recaman.js" type="text/JavaScript"></script>
 </body>
 </html>
