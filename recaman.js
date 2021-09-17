@@ -68,12 +68,21 @@
     }
 
     function set_scale(event) {
-        var factor = 2
         var canvas = event.currentTarget
+        var oldscale = 2
+        var factor = 2
+
+        if(canvas.dataset.scale) {
+            oldscale = Number(canvas.dataset.scale)
+        }
+        if(canvas.dataset.scalefactor) {
+            factor = canvas.dataset.scalefactor
+        }
+
         if(event.deltaY < 0) {
-            canvas.dataset.scale = canvas.dataset.scale * factor
+            canvas.dataset.scale = oldscale * factor
         } else {
-            canvas.dataset.scale = canvas.dataset.scale / factor
+            canvas.dataset.scale = oldscale / factor
         }
         recaman(canvas)
     }
@@ -81,7 +90,9 @@
     function init(event) {
         var canvases = document.querySelectorAll('.recaman')
         canvases.forEach(function(canvas) {
-            canvas.addEventListener('wheel', set_scale)
+            if(canvas.dataset.scalable) {
+                canvas.addEventListener('wheel', set_scale)
+            }
             recaman(canvas)
         })
         window.addEventListener('resize', function(event) {
